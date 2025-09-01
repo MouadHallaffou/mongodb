@@ -4,6 +4,7 @@
    - posts (titre, contenu, auteur, date)
    - comments (contenu, auteur, date, postId)
    - users (nom, email)
+
 ```json
 {
   "_id": ObjectId("..."),
@@ -11,7 +12,8 @@
   "content": "Ceci est le contenu de l'article...",
   "author": {
     "_id": ObjectId("userId123"),
-    "name": "Mouad"
+    "name": "Mouad",
+    "email": "mouad@gmail.com"
   },
   "date": ISODate("2025-09-01T10:00:00Z"),
   "comments": [
@@ -20,7 +22,8 @@
       "content": "Très intéressant !",
       "author": {
         "_id": ObjectId("userId456"),
-        "name": "Youssef"
+        "name": "Youssef",
+        "email": "youssef@gmail.com"
       },
       "date": ISODate("2025-09-01T11:00:00Z")
     }
@@ -28,7 +31,9 @@
 }
 
 ```
+
 2. Proposez une version embedded et une version avec références.
+
 ```json
 // Collection users
 {
